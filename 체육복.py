@@ -3,8 +3,6 @@ import collections
 def solution(n, lost, reserve):
     answer = list(range(1, n + 1))
     answer = collections.Counter(answer) - collections.Counter(lost) + collections.Counter(reserve)
-    for idx, value in enumerate(answer):
-        print(value)
     print(answer)
     return answer
 
